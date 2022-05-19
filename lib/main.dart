@@ -22,33 +22,47 @@ class MyApp extends StatelessWidget {
       appBar: AppBar(
         title: Text('금호동3가'),
       ),
-      body: Container(
-        margin: EdgeInsets.all(10),
-
-        child: Row(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: SizedBox.fromSize(
-                size: Size.fromRadius(48),
-                child: Image.asset('assets/photo.png', fit: BoxFit.cover, ),
-
-              ),
-            ),
-            Container(
-              child: Column(
-                children: [
-                  Text('타이틀'),
-                  Text('주소'),
-                  Text('가격'),
-                  Text('좋아요'),
-                ],
-              ),
-
-            ),
-          ],
-        )
-      ),
+      body: ShopItem()
     ));
   }
 }
+// Container(
+// height: 200,
+// padding: EdgeInsets.all(20),
+// child: Row(
+// children: [
+// Image.asset('assets/photo.png', ),
+// Container(
+// width: MediaQuery.of(context).size.width * 0.7,
+// child: Column(
+// crossAxisAlignment: CrossAxisAlignment.start,
+// children: [
+// Text('카메라팝니다', style: TextStyle(fontSize: 15),),
+// Text('금호동3가'),
+// Text('7000원'),
+// Row(
+// mainAxisAlignment: MainAxisAlignment.end,
+// children: [
+// Icon(Icons.favorite),
+// Text('4')
+// ],
+// )
+// ],
+// ),
+// )
+//
+//
+// ],
+// ),
+// ),
+class ShopItem extends StatelessWidget {
+  const ShopItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: Text('안녕'),
+    );
+  }
+}
+
